@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "backend/01_Concepts/DB/NoSQL.md",
+                "file": "backend/01_Concepts/Security/Authentication 객체.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NoSQL"
+              "title": "Authentication 객체"
             }
           }
         ],
@@ -186,9 +186,10 @@
   },
   "active": "acc7b94a360e6a05",
   "lastOpenFiles": [
+    "backend/01_Concepts/DB/NoSQL.md",
+    "backend/01_Concepts/Security/Authentication 객체.md",
     "backend/05_Errors_Troubleshooting/README.md",
     "img/NoSQL.png",
-    "backend/01_Concepts/DB/NoSQL.md",
     "backend/01_Concepts/DB/redis.md",
     "backend/01_Concepts/JPA/CrudRepository.md",
     "backend/01_Concepts/Spring/StringUtils.md",
@@ -220,7 +221,6 @@
     "backend/01_Concepts/JPA/지연로딩.md",
     "backend/02_Annotations/jpa/@PerPersist.md",
     "backend/01_Concepts/README.md",
-    "backend/01_Concepts/Security/SecurityConfig, FilterConfig.md",
     "backend/01_Concepts/Security/Untitled",
     "backend/01_Concepts/Security/Filter",
     "backend/01_Concepts/Security",
