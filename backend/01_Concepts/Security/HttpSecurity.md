@@ -1,32 +1,16 @@
 ## HttpSecurity란?
 
-> 다른 클래스에서 만들어진 어려가지 필터들을 체인 형태로 연결시켜줌
+> 웹 보안 관련 설정 중심 객체
 
-## 흐름을 더 풀어주면
+### 역할 요약
 
-1. **필터는 클래스 단위로 따로따로 존재**해.
-    
-    - `JwtTokenFilter` : 토큰 검증
-    - `ExceptionFilter` : 에러 JSON 변환
-    - `UsernamePasswordAuthenticationFilter` : 폼 로그인
-    - `FilterSecurityInterceptor` : 최종 권한 체크
-2. 그냥 놔두면 각자 흩어져 있는 필터들이 **아무 순서 없이 따로 놀게 돼**.
-    
-    → 누가 먼저 실행될지 알 수 없으면, 보안이 깨지거나 동작이 꼬임.
-    
-3. 그래서 **HttpSecurity가 빌더 역할**을 해서:
-    
-    - “이 필터는 저 필터 앞에”,
-        
-    - “이 URL은 누구만 접근 가능”,
-        
-    - “세션 쓸지 말지”…
-        
-        이런 걸 다 선언적으로 쌓아둔 뒤,
-        
-4. `http.build()`를 호출하면 **DefaultSecurityFilterChain**이라는 **완성된 필터 체인**을 만들어서 등록해.
-    
-    이제 모든 요청은 **그 체인에 들어있는 필터들을 순서대로 거쳐서** 컨트롤러에 도달해.
-    
+|기능|예시 설정|
+|---|---|
+|인증(Authentication)|로그인, 세션, 토큰, 사용자 정보 등|
+|인가(Authorization)|`/admin/**`는 관리자만, `/user/**`는 로그인한 유저만 등|
+|공격 방어|CSRF, CORS, XSS 같은 웹 공격 방어 설정|
+|로그인 방식|formLogin, httpBasic, JWT 기반 등|
+|로그아웃 처리|로그아웃 URL, 세션 무효화 등|
+|커스텀 필터 추가|SecurityFilterChain에 나만의 필터 삽입|
 
----
+이런식으로 웹과 관련된 보안 설정들을 다 여기서 관리한다.
