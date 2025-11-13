@@ -39,10 +39,14 @@
             "id": "d37a9e207f2167b9",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           }
         ],
@@ -207,6 +211,8 @@
   },
   "active": "d37a9e207f2167b9",
   "lastOpenFiles": [
+    "Untitled.md",
+    "무제 폴더",
     "backend/01_Concepts/Security/JWT.md",
     "backend/01_Concepts/Spring/MVC.md",
     "backend/01_Concepts/Security/Filter/UsernamePasswordAuthenticationFilter.md",
@@ -233,8 +239,6 @@
     "backend/02_Annotations/redis/@RedisHash.md",
     "backend/02_Annotations/jpa/@Indexed.md",
     "backend/02_Annotations/redis",
-    "backend/02_Annotations/jpa/@TimeToLive.md",
-    "backend/02_Annotations/spring-data-redis/@TimeToLive.md",
     "backend/02_Annotations/spring-data-redis",
     "img/dto.png",
     "img/JWT1.png",
@@ -248,7 +252,6 @@
     "backend/01_Concepts/JVM",
     "backend/06_Snippets_Cheats",
     "backend/05_Errors_Troubleshooting",
-    "backend/04_Recipes_HowTo",
     "img/image.png"
   ]
 }
