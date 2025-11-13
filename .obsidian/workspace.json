@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "backend/01_Concepts/Security/Filter/UsernamePasswordAuthenticationFilter.md",
+                "file": "backend/02_Annotations/spring-core/@JsonFormat.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UsernamePasswordAuthenticationFilter"
+              "title": "@JsonFormat"
             }
           }
         ],
@@ -184,8 +184,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "9d0d08bf2d0e5777",
+  "active": "acc7b94a360e6a05",
   "lastOpenFiles": [
+    "backend/01_Concepts/Security/Filter/UsernamePasswordAuthenticationFilter.md",
+    "backend/02_Annotations/spring-core/@JsonFormat.md",
     "backend/01_Concepts/Security/claims.md",
     "backend/01_Concepts/Java/Collection.md",
     "backend/01_Concepts/Java/Untitled.md",
@@ -214,8 +216,6 @@
     "backend/01_Concepts/Security/JWT.md",
     "backend/01_Concepts/Java/orElse(T other), orElseThrow(Supplier), ifPresent(Consumer), isPresent().md",
     "img/dto.png",
-    "backend/03_Patterns_Architecture/DTO.md",
-    "backend/01_Concepts/Spring/ObjectMapper.md",
     "img/JWT1.png",
     "img/JWT2.png",
     "img/JWT3.png",

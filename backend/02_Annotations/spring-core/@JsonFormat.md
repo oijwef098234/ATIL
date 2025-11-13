@@ -1,0 +1,53 @@
+## **@JsonFormat란?**
+
+> 객체를 JSON으로 변환할 때 표현하는 방식을 지정하는 어노테이션
+
+### 예시코드
+
+```java
+package com.example.springsecurity.global.error.exception;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import io.jsonwebtoken.ExpiredJwtException;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
+public enum ErrorCode {
+    // admin
+    ADMIN_NOT_FOUND(404, "관리자 계정을 찾을 수 없습니다."),
+    ADMIN_DUPLICATE(409, "이미 존재하는 관리자입니다."),
+
+    //user
+    USERNAME_DUPLICATE(409, "이미 존재하는 사용자입니다."),
+
+    // auth
+    NOT_MATCH_PASSWORD(400, "아이디 또는 비밀번호를 확인해주세요."),
+    EMAIL_DUPLICATE(409, "이미 가입된 이메일입니다."),
+
+    // Jwt
+    INVALID_TOKEN(401, "검증 되지 않은 토큰 입니다."),
+    EXPIRED_TOKEN(404, "만료된 토큰입니다.");
+
+    private final int statusCode;
+    private final String errorMessage;
+}
+```
+
+- 해석을 하자면 모양(shape)을 OBJECT, 즉 열거형으로 나타내는것을 말한다.
+
+```json
+{
+"statusCode" : 404,
+"errorMessage" : "..."
+}
+```
+
+### 다른 shape 값들(간단 비교)
+
+- `JsonFormat.Shape.STRING` → `"ADMIN_NOT_FOUND"` (문자열 하나)
+- `JsonFormat.Shape.NUMBER` → `0` 같은 번호(거의 안 씀)
+- `JsonFormat.Shape.ARRAY` → `["ADMIN_NOT_FOUND", 404, "메시지"]` 같은 배열(특수 케이스)
+- `JsonFormat.Shape.OBJECT` → `{"statusCode":404,"errorMessage":"..."}`
