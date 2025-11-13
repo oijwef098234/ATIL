@@ -1,31 +1,16 @@
 ## UsernamePasswordAuthenticationFilter란?
 
-> 사용자가 인증 요청을 하면 사용자의 정보를 가로채서 인증 절차를 진행함
+> UsernamePasswordAuthenticationFilter는 Spring Security에서 제공되는 보안 필터 중 하나
 
----
+- 폼 기반의 로그인을 처리하며, HTTP POST 요청을 통해 전송된 사용자의 아이디와 비밀번호를 기반으로 인증을 수행한다
 
-## 언제실행되냐?
+### 구성요소
 
-> 사용자가 로그인 요청(`POST /login` 기본 경로)을 보낼 때 실행됨.
+- principal : 인증 주체를 나타내는 객체 (일반적으로 사용자의 username 또는 email)
+- credentials : 인증 주체의 자격 증명 (일반적으로 비밀번호)
+- authorities : 사용자의 권한 목록을 나타내는 객체
 
-- 정확히는 **요청 URL + HTTP 메서드**가 맞을 때 작동함
-    - URL 기본값: `/login`
-    - HTTP 메서드: `POST`
-- 이 조건을 만족하는 요청이면 이 필터가 **가장 먼저 동작함**
+### 사용 flow
 
----
-
-## 무슨 일을 하냐?
-
-1. **요청 가로채기**
-    - 클라이언트가 보낸 로그인 폼에서 파라미터 추출 (`username`, `password`).
-2. **토큰 객체 생성**
-    - `UsernamePasswordAuthenticationToken`을 만들어서 "이 사람이 로그인 시도했음"을 표시.
-3. **인증 매니저 호출**
-    - `AuthenticationManager`에게 이 토큰을 전달해서 검증을 맡김.
-    - 실제 검증은 `AuthenticationProvider`(대표적으로 `DaoAuthenticationProvider`)가 담당.
-4. **성공/실패 처리**
-    - 성공 → `SecurityContext`에 인증된 사용자 저장, 이후 요청부터 인증된 상태 유지.
-    - 실패 → `AuthenticationFailureHandler` 실행 (보통 로그인 실패 페이지나 401 응답).
-
----
+- 사용자가 입력한 사용자명(username)과 비밀번호(password)로 Authentication 객체를 생성하여 인증 프로세스에 활용됩니다.
+- 보통 사용자가 로그인하는 경우에 사용자명과 비밀번호를 받아 UsernamePasswordAuthenticationToken을 생성하여 인증 매니저에게 전달합니다
