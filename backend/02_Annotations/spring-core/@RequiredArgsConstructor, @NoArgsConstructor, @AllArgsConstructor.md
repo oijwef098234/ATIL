@@ -55,6 +55,24 @@ public User(){
 
 Been으로 등록하는 과정에서 기본 생성자는 필수임
 
+---
+
+```java
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
+public class Example {}
+```
+
+또한 이런식으로 생성자의 접근 권한도 설정할 수 있다.
+
+보이는것과 같이 public으로 설정할 수 있고
+
+```java
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class Example {}
+```
+
+이런식으로 private로 설정할 수도 있다.
+
 ### @AllArgsConstructor
 
 > 모든 필드를 파라미터로 갖는 생성자를 자동으로 만들어준다.
@@ -76,3 +94,4 @@ public User(String name, int age){
 }
 ```
 
+---
