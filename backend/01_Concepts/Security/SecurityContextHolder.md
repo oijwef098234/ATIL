@@ -6,7 +6,7 @@
 
 1. 사용자가 로그인 요청 (`/login` 등)
 2. `AuthenticationManager`가 아이디·비밀번호 확인
-3. 인증 성공 시 `Authentication` 객체 생성
+3. 인증 성공 시 `Authentication` 객체 생성, 만약에 실패시 비워짐
 4. 그 `Authentication` 객체를 `SecurityContext`에 저장
 5. `SecurityContextHolder`가 그 `SecurityContext`를 들고 있음
 
