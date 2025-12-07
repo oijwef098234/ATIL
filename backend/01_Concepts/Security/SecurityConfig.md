@@ -1,4 +1,4 @@
-## SpringSecurity란?
+## SecurityConfig란?
 
 > Jwt 인증 방식에 있어서 보안에 관한 모든 설정을 관할하는 클래스
 
