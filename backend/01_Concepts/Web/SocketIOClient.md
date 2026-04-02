@@ -1,6 +1,6 @@
 ## SocketIOClient란?
 
-> **웹소켓 연결된 클라이언트 하나를 나타내는 서버측 객체**
+> 웹소켓에 연결된 사용자를 나타내는 객체
 
 - 웹소켓 서버 안에는 다음과 같은 구조로 클라이언트들이 존재함
 
@@ -27,3 +27,9 @@ public void sendMessage(SocketIOClient client, ChatDto message) {
 - query parameter
 - room 정보
 - 연결 상태 등등
+
+## socketIOServer란?
+
+> 웹소켓 서버 본채
+
+- 모든 클라이언트 객체들이 여기로 연결됨
